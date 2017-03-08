@@ -10,8 +10,8 @@ import qmaks.askme.Question;
  */
 public class GameThread extends Thread {
 
-    private static int prevRnd = -1;
-    private static int prevQuestion = -1;
+    private int prevRnd = -1;
+    private int prevQuestion = -1;
 
     public GameThread() {
         Main.getPlugin().gameThread = this;
