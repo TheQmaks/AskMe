@@ -45,7 +45,7 @@ public class Main extends JavaPlugin implements Listener {
                     if (answerValid(currentQuestion.getAnswers(), msg)) {
                         cmdExec(currentQuestion.getRewardCmd(), p);
                         msg(p, currentQuestion.getCorrentAnswer());
-                        massMsg(currentQuestion.getMassNotification());
+                        massMsg(currentQuestion.getMassNotification().replace("<sender>", p.getName()));
                         isActive = false;
                         gameThread.stop();
                         new GameThread().start();
